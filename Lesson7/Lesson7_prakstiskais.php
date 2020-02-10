@@ -1,5 +1,5 @@
 <?php
-echo 'Uztaisīt klasi, kurai izveidojot jaunu instanci, izdrukāsies Hello World-------<br>'; 
+echo '1.uzd Uztaisīt klasi, kurai izveidojot jaunu instanci, izdrukāsies Hello World-------<br>'; 
 
 // <!-- new Foo(); -> Hello World
 
@@ -26,47 +26,74 @@ $pupa = new Cat ('Pupa');
 $pupa = new Cat ('Pupa');
 
 
+echo '------------------------<br>';
+echo '---2. Uzrakstīt klasi, kas to izveidojot saņems vienu paramentru (string) un tajā būs metode sayHello(). Izsaucot šo metodi, izdrukāsies "Hello, {name}" uz ekrāna.--<br>';
+// $foo = new Bar('Boom!');
+// $foo->sayHello();
+// $foo->sayHello();
+
+// Hello, Boom!
+// Hello, Boom!
+// Hello, Boom!
+
+
+
+class Bar
+{
+    public $sayHello;
+    public $setNewText;
+    
+    public function __construct(string $sayHello)
+    {
+        echo 'Hello, ' . '<br>';
+    }
+
+    public function setNewText(string $setNewText)
+    {
+        $this->setNewText = $setNewText;
+        $sayHello =  $sayHello . $setNewText . '<br>';
+    }
+
+}
+
+$bar = new Bar('boom!');
+
+
 echo '-------<br>';
-echo '---2.uzd. Uztaisīt klasi, kas to izveidojot saņems vienu parametru (string) un tajā būs metode 
-sayHello(). Izsaucot šo metodi izdrukāsies "Hello, {name}" uz ekrāna-----<br>';
+echo '--- 3. Līdzīgi, kā 1. uzdevums, bet katru reizi drukājot Hello world, izdrukā arī skaitli, cik "new" instances līdz tam brīdim ir taisītas.-----<br>';
 
-// class Boom
-// {
-//     public $name;
+// new Foo();
+// new Foo();
+// new Foo();
+// new Foo();
 
-//     public function __construct() 
-//     {
-//         $this->name = $name;
-//     }
-
-//     public function sayHello(): string
-//     {
-//         return 'Hello ' . $this->name . '<br>';
-//     }
-
-// }
-
-// echo sayHello('Boom');
-
-
-echo '-------<br>';
-echo '---3.uzd līdzīgi kā pirmais, bet aiz Hello World izdrukā skaitli, cik new instances ir uztaisītas-----<br>';
+// Hello world - 1
+// Hello world - 2
+// Hello world - 3
+// Hello world - 4
 
 class Foo
 {
-    public static $newCount;
+    private $name;
+    public static $fooCount = 0;
 
-    public function __construct() 
+    public function __construct(string $name)
     {
-        self::$newCount++;
-        echo 'Hello World - ' . $newCount . '<br>';
+        $this->name = $name;
+        self::$fooCount++;
+        echo 'Hello World - ' . Foo::$fooCount . '<br>';
     }
+    
 }
 
-$muris = new Foo ('Muris');
-$muris = new Foo ('Muris');
-$pupa = new Foo ('Pupa');
-$pupa = new Foo ('Pupa');
+$a = new Foo('A');
+$b = new Foo('B');
+$c = new Foo('C');
+$d = new Foo('D');
+$d = new Foo('D');
+$d = new Foo('D');
+$d = new Foo('D');
+
 
 echo '-------<br>';
 echo '---4.Uztaisīt bankomātu, metodes getBallance() = pārada konta atlikumu, addMoney() = pieskaita naudu., withdrawMoney = noņems naudu-----<br>';
@@ -79,27 +106,42 @@ echo '---4.Uztaisīt bankomātu, metodes getBallance() = pārada konta atlikumu,
 
 class Atm
 {
-    
     public $ballance = 0;
-      
+    
     public function __construct()
     {
-        function addMoney(): void
-        {
-            $this-> $ballance + $money;
-        }
+        $this->ballance = $ballance;
     }
 
-    public function withdrawMoney(): void
+    public function addMoney(int $numToAdd): void
     {
-        $this-> $ballance + $money;
+        $this->numToAdd = $numToAdd;
+        $this->result = $this->ballance + $this->numToAdd;
     }
 
+    public function withdrawMoney(int $numToWithdraw): void
+    {
+        $this->numToWithdraw = $numToWithdraw;
+        $this->result = $this->ballance - $this->numToWithdraw;
+    }
+ 
+    public function getBallance(): int
+    {
+        return $this->result;
+    }
 }
 
-$atm = new Atm();
+$calc = new Atm();
+
+echo $calc->ballance . '<br>';
+echo $ballance . '<br>';
+
+echo numToAdd(50) . '<br>';
+echo $calc->numToAdd(50) . '<br>';
+echo $this->numToAdd(50) . '<br>';
+
+echo $calc->getBallance() . '<br>';
+
 
 echo '-------<br>';
 echo '---5.uzd. Uztaisīt bankomatu, kurs prot izdrukāt visu darījumu vēsturi-----<br>';
-
-
