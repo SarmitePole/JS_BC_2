@@ -2,8 +2,11 @@
 
 class BaseView
 {
-    public static function generate(string $controller, string $view): string 
+    public static function generate(string $controller, string $view, $data): string 
     {
+        
+       
+
         ob_start();
 
         require __DIR__ . '/../Views/Global/header.php';

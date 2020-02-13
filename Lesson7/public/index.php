@@ -10,11 +10,13 @@
 
 require_once '../app/Views/BaseView.php';
 require_once '../app/Controllers/HomeController.php';
-require_once '../app/Controllers/AboutUsController.php';
-require_once '../app/Controllers/ContactUsController.php';
+require_once '../app/Controllers/InfoController.php';
 require_once '../app/Controllers/PostsController.php';
-require_once '../app/Controllers/LoginController.php';
-require_once '../app/Controllers/RegistrationController.php';
+require_once '../app/Controllers/UsersController.php';
+require_once '../app/Controllers/ErrorsController.php';
+require_once '../app/Repositories/PostsRepository.php';
+require_once '../app/Models/Post.php';
+
 
 // $page = isset($_GET['page']) ? 'home'; paskaidrojums
 $page = $_GET['page'] ?? 'home';
@@ -25,27 +27,34 @@ switch($page) {
         break;
 
     case 'aboutUs':
-        echo (new AboutUsController)->index();
+        echo (new InfoController)->aboutUs();
         break;
 
     case 'contactUs':
-        echo (new ContactUsController)->index();
+        echo (new InfoController)->contactUs();
         break;
       
     case 'posts':
         echo (new PostsController)->index();
         break;
 
-    case 'login':
-        echo (new LoginController)->index();
+    case 'users':
+        echo (new UsersController)->login();
         break;    
 
-    case 'registration':
-        echo (new RegistrationController)->index();
+    case 'users':
+        echo (new UsersController)->registration();
         break;        
 
     defoult:
-        echo (new HomeController)->index();
+        echo (new ErrorsController)->error404();
+}
+
+function dd($data)
+{
+    echo '<pre>';
+    var_dump($data);
+    die;
 }
 
 // echo (new HomeController)->index();
