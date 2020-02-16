@@ -1,11 +1,13 @@
 <?php
 
 // home
+// posts
 // info
 // - about us
-// - contacts
-// login
-// registration
+// - contact us
+// users
+// - login
+// - registration
 // super-secret
 
 require_once '../app/Views/BaseView.php';
@@ -14,6 +16,7 @@ require_once '../app/Controllers/InfoController.php';
 require_once '../app/Controllers/PostsController.php';
 require_once '../app/Controllers/UsersController.php';
 require_once '../app/Controllers/ErrorsController.php';
+require_once '../app/Controllers/SuperSecretController.php';
 require_once '../app/Repositories/PostsRepository.php';
 require_once '../app/Models/Post.php';
 
@@ -24,6 +27,10 @@ $page = $_GET['page'] ?? 'home';
 switch($page) {
     case 'home':
         echo (new HomeController)->index();
+        break;
+
+    case 'posts':
+        echo (new PostsController)->index();
         break;
 
     case 'aboutUs':
@@ -38,15 +45,19 @@ switch($page) {
         echo (new PostsController)->index();
         break;
 
-    case 'users':
+    case 'login':
         echo (new UsersController)->login();
         break;    
 
-    case 'users':
+    case 'registration':
         echo (new UsersController)->registration();
-        break;        
+        break;  
+        
+    case 'superSecret':
+        echo (new SuperSecretController)->index();
+        break;    
 
-    defoult:
+    default:
         echo (new ErrorsController)->error404();
 }
 

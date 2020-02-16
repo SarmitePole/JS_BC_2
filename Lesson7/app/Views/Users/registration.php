@@ -1,3 +1,3 @@
 <h2>
-this is register
+this is registration
 </h2>

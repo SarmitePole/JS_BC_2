@@ -8,6 +8,6 @@ class InfoController
     }
     public function contactUs(): string 
     {
-        return BaseView::generate('Info', 'index');
+        return BaseView::generate('Info', 'contactUs');
     }
 }

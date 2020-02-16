@@ -6,6 +6,8 @@ class PostsController
     {
         $posts = PostsRepository::getPosts();    //Šo sac par BiznesaLoģiku, kura parasti stāv kontrolierī
 
-        return BaseView::generate('Posts', 'index', $posts);
+        var_dump($posts);
+
+        return BaseView::generate('Posts', 'index', ['posts' => $posts]);
     }
 }

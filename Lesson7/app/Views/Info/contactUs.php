@@ -1,3 +1,3 @@
 <h2>
-this is contact us
+Contacts page
 </h2>

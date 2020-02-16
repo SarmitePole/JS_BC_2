@@ -19,11 +19,20 @@ class PostsRepository
 
             [
                 'id' => 125,
-                'title' => 'Dievietes atziņa 15',
+                'title' => 'Dievietes atziņa 125',
                 'text' => 'Netici visam, ko lasi internetā. /Karlis U',
             ],
 
         ];
+        // $posts = [];
+        // foreach ($data as $postData) {
+        //     $post = new Post();
+        //     $post->id = $postData['id'];
+        //     $post->title = $postData['title'];
+        //     $post->text = $postData['text'];
+
+        //     $posts[] = $post;
+        // }
         
         return $data;
     }
