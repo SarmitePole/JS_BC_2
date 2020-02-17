@@ -6,18 +6,21 @@ This is POSTS!
     // $posts = PostsRepository::getPosts();
 
     // dd($posts);
-    // Šitā nevar, jo tad sanāk ka šī View daļa runāja pa taisno ar Models..tā nedrīst - jārunā caur Controller
-
-    
-
-
+    // Šitā nevar, jo tad sanāk ka šī View daļa runāja pa taisno ar Models..tā nedrīkst - jārunā caur Controller
+    //  dd($posts);
 ?>
 
-
-
 <ul>
-    <li>ddd</li>
-    <li>ddd</li>
-    <li>ddd</li>
 
+    <?php 
+        foreach ($posts as $post) {
+            echo '<li><a href="?page=post&id=' . $post['title'] . '</li>';
+        }
+
+    ?>
 </ul>
+
+
+
+
+

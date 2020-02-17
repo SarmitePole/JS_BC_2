@@ -2,9 +2,10 @@
 
 class BaseView
 {
-    public static function generate(string $controller, string $view, array $data = []): string 
+    public static function generate(string $controller, string $view, $data = []): string 
     {
-        extract($data);     
+        // dd($data['posts']);  
+        extract($data);
 
         ob_start();
 
