@@ -4,28 +4,23 @@ class PostsRepository
 {
     public static function getPosts(): array 
     {
-        $data = [
-            [
-                'id' => 123,
-                'title' => 'Dievietes atziņa 123',
-                'text' => 'Netici visam, ko lasi internetā. /A.Linkolns',
-            ],
-
-            [
-                'id' => 124,
-                'title' => 'Dievietes atziņa 124',
-                'text' => 'Netici visam, ko lasi internetā. /Alberts',
-            ],
-
-            [
-                'id' => 125,
-                'title' => 'Dievietes atziņa 125',
-                'text' => 'Netici visam, ko lasi internetā. /Karlis U',
-            ],
-
-        ];
-       
         
-        return $data;
+        // dd(__DIR__);
+        $dataJson = file_get_contents(__DIR__ . '/../data/posts.json');
+        
+        return json_decode($dataJson, true);
     }
+
+    public static function getPost(int $id): ?array
+    {
+        $posts = self::getPosts();
+        foreach ($posts as $post) {
+            if ($post['id']== $id) {
+                return $post;
+            }
+        }
+
+        return null;
+    }
+
 }

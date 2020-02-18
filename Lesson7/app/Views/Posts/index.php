@@ -17,7 +17,7 @@ This is POSTS!
             echo '<li><a href="?page=post&id=' . $post['id'] . '">' . $post['title'] . '</a></li>';
         }
     ?>
-
+    
 </ul>
 
 

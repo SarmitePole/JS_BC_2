@@ -1,7 +1,12 @@
 <?php
 
 // home
+// articles
+// - article
+// - article
 // posts
+// - post
+// - post...
 // info
 // - about us
 // - contact us
@@ -14,10 +19,12 @@ require_once '../app/Views/BaseView.php';
 require_once '../app/Controllers/HomeController.php';
 require_once '../app/Controllers/InfoController.php';
 require_once '../app/Controllers/PostsController.php';
+require_once '../app/Controllers/ArticlesController.php';
 require_once '../app/Controllers/UsersController.php';
 require_once '../app/Controllers/ErrorsController.php';
 require_once '../app/Controllers/SuperSecretController.php';
 require_once '../app/Repositories/PostsRepository.php';
+require_once '../app/Repositories/ArticlesRepository.php';
 require_once '../app/Models/Post.php';
 
 
@@ -33,6 +40,18 @@ switch($page) {
         echo (new PostsController)->index();
         break;
 
+    case 'post':
+        echo (new PostsController)->viewPost();
+        break;  
+    
+    case 'articles':
+        echo (new ArticlesController)->index();
+        break;
+
+    case 'article':
+        echo (new ArticlesController)->viewArticle();
+        break;    
+
     case 'aboutUs':
         echo (new InfoController)->aboutUs();
         break;
@@ -41,10 +60,6 @@ switch($page) {
         echo (new InfoController)->contactUs();
         break;
       
-    case 'posts':
-        echo (new PostsController)->index();
-        break;
-
     case 'login':
         echo (new UsersController)->login();
         break;    
