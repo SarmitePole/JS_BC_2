@@ -24,15 +24,7 @@ class PostsRepository
             ],
 
         ];
-        // $posts = [];
-        // foreach ($data as $postData) {
-        //     $post = new Post();
-        //     $post->id = $postData['id'];
-        //     $post->title = $postData['title'];
-        //     $post->text = $postData['text'];
-
-        //     $posts[] = $post;
-        // }
+       
         
         return $data;
     }

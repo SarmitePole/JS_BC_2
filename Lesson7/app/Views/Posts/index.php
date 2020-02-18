@@ -7,17 +7,17 @@ This is POSTS!
 
     // dd($posts);
     // Šitā nevar, jo tad sanāk ka šī View daļa runāja pa taisno ar Models..tā nedrīkst - jārunā caur Controller
-    //  dd($posts);
+    // dd($posts);
 ?>
 
 <ul>
 
     <?php 
         foreach ($posts as $post) {
-            echo '<li><a href="?page=post&id=' . $post['title'] . '</li>';
+            echo '<li><a href="?page=post&id=' . $post['id'] . '">' . $post['title'] . '</a></li>';
         }
-
     ?>
+
 </ul>
 
 
