@@ -7,15 +7,26 @@ class ArticlesRepository
         
         // dd(__DIR__);
         $dataJson = file_get_contents(__DIR__ . '/../data/articles.json');
+
+        $articles = json_decode($dataJson, true);
+
+        $output = [];
+        foreach ($articles as $article) {
+            $articleObj = new Article();
+            $articleObj->id = $article['id'];
+            $articleObj->title = $article['title'];
+            $articleObj->text = $article['text'];
+            $output[] = $articleObj;
+        }
         
-        return json_decode($dataJson, true);
+        return $output;
     }
 
-    public static function getArticle(int $id): ?array
+    public static function getArticle(int $id): ?Article
     {
-        $articles = self::getArticles();
+        $articles = self::getArticles(); //Šitā dabū visus Articles
         foreach ($articles as $article) {
-            if ($article['id']== $id) {
+            if ($article->id == $id) {
                 return $article;
             }
         }

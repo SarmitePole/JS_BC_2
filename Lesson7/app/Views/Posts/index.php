@@ -14,7 +14,7 @@ This is POSTS!
 
     <?php 
         foreach ($posts as $post) {
-            echo '<li><a href="?page=post&id=' . $post['id'] . '">' . $post['title'] . '</a></li>';
+            echo '<li><a href="?page=post&id=' . $post->id . '">' . $post->title . '</a></li>';
         }
     ?>
     

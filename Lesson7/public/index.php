@@ -26,6 +26,7 @@ require_once '../app/Controllers/SuperSecretController.php';
 require_once '../app/Repositories/PostsRepository.php';
 require_once '../app/Repositories/ArticlesRepository.php';
 require_once '../app/Models/Post.php';
+require_once '../app/Models/Article.php';
 
 
 // $page = isset($_GET['page']) ? 'home'; paskaidrojums

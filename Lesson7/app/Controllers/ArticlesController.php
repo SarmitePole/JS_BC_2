@@ -14,8 +14,7 @@ class ArticlesController
         $articleID = $_GET['id'] ?? 0;
         $article = ArticlesRepository::getArticle($articleID);
 
-        // dd($article); lai pārbaudītu, ko esam pasūtījuši
-        
+      
         return BaseView::generate('Articles', 'viewArticle', ['article' => $article]);
     }
 }

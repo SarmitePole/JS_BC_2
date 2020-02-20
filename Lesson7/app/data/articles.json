@@ -1,25 +1,25 @@
 [
     {
         "id" : 11,
-        "title" : "Some title of really great article 11",
-        "body": "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+        "title" : "Ūdri Raksts Nr.11",
+        "text": "Ūdriem ir slaidi, gari ķermeņi un relatīvi īsas kājas, ķepām ir peldplēves. Lielākai daļai ir asi nagi, un visiem, izņemot kalānus, ir gara, muskuļota aste. Ūdru kažoks ir dubults, to pavilna ir mīksta un bieza, bet to no ūdens sargā gara akotspalva. Pavilna zem akotspalvas saglabājas sausa, un tā kā starp apmatojuma spalviņām ir ieslēgts gaiss, tad ūdram zem ūdens ir silti. Atšķirībā no citiem jūras zīdītājiem ūdriem nav zemādas tauku, kas tos sargātu no aukstuma, tādēļ sausa pavilna ir ļoti svarīga ūdra labsajūtai"
     },
     
     {
         "id": 12,
-        "title" : "Some title of really great article 12",
-        "body": "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+        "title" : "Kalāni Raksts Nr.12",
+        "text": "Kalānus nemīl zvejnieki, jo kalāni un cilvēki ir iecienījuši vienas un tās pašas jūras delikateses. Kādreiz Klusajā okeānā dzīvoja 150 000—300 000 kalānu. Laikā no 1741. gada līdz 1911. gadam kalānus intensīvi medīja, gan lai atbrīvotos no konkurenta jūrā, gan lai iegūtu vērtīgo kažokādu. Zvēru populācija saruka līdz 1000—2000 dzīvniekiem. Dabas aizstāvji uzsāka aktīvu cīņu kalānu sugas glābšanai. Mūsdienās kalānus aizliegts medīt, tiem ir ierīkotas aizsargājamas teritorijas un to populācija lēnām atjaunojas."
     },
     
     {
         "id": 13,
-        "title" : "Some title of really great article 13",
-        "body": "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+        "title" : "Semuļu dzimta Raksts Nr.13",
+        "text": "Sermuļu dzimtas dzīvnieki ir ļoti dažādi gan izskatā, gan uzvedībā. Mazākais sermuļu dzimtas dzīvnieks ir zebiekste (Mustela nivalis), un tā nav daudz lielāka par peli, toties lielākais ir Brazīlijas dižūdrs (Pteronura brasiliensis), kas var sasniegt 2,4 m garumu, bet kalāns (Enhydra lutris) var svērt 45 kg, un tas ir smagākais sermuļu dzimtas dzīvnieks. Tiņa (Gulo gulo) sakodiens ir tik spēcīgs, ka tas spēj pārkost aļņa augšstilba kaulus, kā arī ir novērots, ka tinis spēj padzīt lāci no tā medījuma. Kalāns, lai salauztu vēžveidīgo stiprās bruņas, lieto akmeņus. Caunas (Martes) pamatā dzīvo kokos, bet āpši (Meles) rok alas un lielu daļu sava mūža pavada zem zemes. "
     },
     
     {
         "id": 14,
-        "title" : "Some title of really great article 14",
-        "body": "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+        "title" : "Patagonijas zebiekste Raksts Nr.14",
+        "text": "Patagonijas zebiekstes ķermeņa garums ir 30—35 cm, astes garums 6—9 cm, svars vidēji 225 g.[2] Tai ir ļoti mazas austiņas, kas gandrīz pilnībā ir noklātas ar kažoka spalvām,[1] īsas kājas, un salīdzinoši īsā astīte ir kupla.Kažoka matojums jaukts; gaišas, gandrīz baltas splavas jauktas ar melnām vai tumši brūnām. Pavēdere un kājas melnas. Galva tumša, bet tās virsa balta vai gaiši dzeltena, ausis vienā krāsā ar pakausi. Aiz ausīm sākas gaišas svītras, kas beidzas priekškāju padusēs, šķērsojot kaklu un plecus."
     }
 ]
