@@ -1,5 +1,8 @@
 <?php
 
+// phpinfo();
+// die; ar šo apskatās, kādi extentioni ir pieejami šajā PHP versijā
+
 // home
 // articles
 // - article
@@ -15,19 +18,8 @@
 // - registration
 // super-secret
 
-require_once '../app/Views/BaseView.php';
-require_once '../app/Controllers/HomeController.php';
-require_once '../app/Controllers/InfoController.php';
-require_once '../app/Controllers/PostsController.php';
-require_once '../app/Controllers/ArticlesController.php';
-require_once '../app/Controllers/UsersController.php';
-require_once '../app/Controllers/ErrorsController.php';
-require_once '../app/Controllers/SuperSecretController.php';
-require_once '../app/Repositories/PostsRepository.php';
-require_once '../app/Repositories/ArticlesRepository.php';
-require_once '../app/Models/Post.php';
-require_once '../app/Models/Article.php';
-
+require_once '../app/functions.php'; 
+// Ar šo requiru aiziet uz failu Functions, kuram jābūt Global un kurā stāv visi vajadzīgie "required once"
 
 // $page = isset($_GET['page']) ? 'home'; paskaidrojums
 $page = $_GET['page'] ?? 'home';
@@ -75,13 +67,6 @@ switch($page) {
 
     default:
         echo (new ErrorsController)->error404();
-}
-
-function dd($data)
-{
-    echo '<pre>';
-    var_dump($data);
-    die;
 }
 
 // echo (new HomeController)->index();
