@@ -8,6 +8,7 @@ class ArticlesRepository
         $query = DB::$connection->query("SELECT * FROM articles");
         
         $output = [];
+
         while ($article = $query->fetchObject('Article')) {
             $output[] = $article;
         }
@@ -21,7 +22,7 @@ class ArticlesRepository
         $query = DB::$connection->prepare("SELECT * FROM articles WHERE id = :id");
         $query->execute(['id' =>$id]);
 
-        
+    
         $article = $query->fetchObject('Article');
     
         if(!$article) {
