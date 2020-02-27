@@ -4,7 +4,24 @@ class UsersController
 {
     public function login(): string 
     {
-        return BaseView::generate('Users', 'login');
+        $errors = [];
+        if ($_POST) {
+            $user = UsersRepository::getUserByEmailAndPassword($_POST['email'], $_POST['password']); 
+            if ($user) {
+                $_SESSION['loggedIN'] = true;
+                
+
+                
+            }            
+            {
+                $_SESSION['loggedIN'] = true;
+                
+            } else {
+                $errors[] = 'Credentials are invalid';
+            }
+        }
+
+        return BaseView::generate('Users', 'login', ['errors' => $errors]);
     }
 
     public function registration(): string 

@@ -33,7 +33,7 @@ class User
                 $errors[] = 'Password is required. ';
             }
 
-            if (!$data['password1'] !=$data['password2']) {
+            if ($data['password1'] != $data['password2']) {
                 $errors[] = 'Passwords must match. ';
             }
 

@@ -68,7 +68,7 @@
 
         <div class="row">
             <div class="col-4">
-                <label for="password-input">Password</label>
+                <label for="password-input">Password repeat</label>
             </div>
 
             <div class="col-8">

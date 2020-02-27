@@ -24,7 +24,23 @@ class UsersRepository
             'email' => $data['email'],
             'firstName' => $data['first-name'],
             'lastName' => $data['last-name'],
-            'password' => $data['password'],
+            'password' => md5($data['email']),
         ]);
+    }
+
+    public static function getUserByEmailAndPassword(string $email, string $password): ?User 
+    {
+        $query = DB::$connection->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
+        $query->execute ([
+            'email' => $email,
+            'password' => md5($password)
+        ]);
+
+        $user = $query->fetchObject('User');
+        if (!$user) {
+            return null;
+        }
+
+        return $user;
     }
 }

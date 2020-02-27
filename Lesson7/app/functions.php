@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once '../app/Views/BaseView.php';
 require_once '../app/Controllers/HomeController.php';
 require_once '../app/Controllers/InfoController.php';
