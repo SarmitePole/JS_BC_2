@@ -9,12 +9,12 @@ class UsersController
             $user = UsersRepository::getUserByEmailAndPassword($_POST['email'], $_POST['password']); 
             if ($user) {
                 $_SESSION['loggedIN'] = true;
+                $_SESSION['first_name'] = $user->first_name;
+                $_SESSION['last_name'] = $user->last_name;
                 
 
-                
             }            
-            {
-                $_SESSION['loggedIN'] = true;
+            
                 
             } else {
                 $errors[] = 'Credentials are invalid';
