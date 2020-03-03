@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <h2>{{ message}}</h2>
+    <h2>{{ message}}</h2>
+    <h2>{{ message}}</h2>
+    <input type="text" v-model="message">
+
+    <!-- <button v-on:click="changeMessage()">Click!</button>
+     -->
+    <button @click="changeMessage()">Click!</button>
+
+    <ul>
+        <template v-for="car of cars">
+            <car 
+                :car="car"
+                @remove-car="removeCar">
+                
+            </car>
+        </template>
+    </ul>
+
+    <ol>
+        <li v-for="thing of things">
+            {{ thing }}
+            <button @click="removeThing(thing)">Delete</button>
+        </li>
+    </ol>
+
+    <ul>
+        <li v-for="task of todos">
+            <!-- {{ task }}, izdrukā visu masīvu-->
+            <template v-if="task.isCompleted">
+
+                <del 
+                
+                    @click="task.isCompleted = !task.isCompleted"
+                >{{ task.title }}
+                </del>
+
+                <button @click="removeTask(task)">Delete</button>
+
+            </template>
+
+            <span 
+                v-else
+                @click="task.isCompleted = !task.isCompleted"
+            >{{ task.title }}
+            </span>
+            
+
+        </li>
+    </ul>
+
+    <hr>
+
+    <div>
+        <input 
+            type="text" 
+            v-model="newTaskName"
+            @keyup.enter="addTask()"
+        >
+        <button @click="addTask()">Add task</button>
+    </div>
+
+
+</div>
+
+
+
+    
+<!-- šis no vuejs.org lapas -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- Šis salinko ar JS failu -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
