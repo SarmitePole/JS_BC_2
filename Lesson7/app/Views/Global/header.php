@@ -11,26 +11,28 @@
     <title>Document</title>
 </head>
 <body>
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="?">Home</a>
-      </li>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="?">Home</a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="?page=aboutUs">About us</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="?page=aboutUs">About us</a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="?page=contactUs">Contact Us</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="?page=contactUs">Contact Us</a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="?page=articles">Articles</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="?page=articles">Articles</a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="?page=posts">Posts</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="?page=posts">Posts</a>
+    </li>
+
+    <?php if (!$_SESSION['loggedIn']) { ?>
 
       <li class="nav-item">
         <a class="nav-link" href="?page=login">Login</a>
@@ -40,5 +42,11 @@
         <a class="nav-link" href="?page=registration">Registration</a>
       </li>
 
-    </ul>
+    <?php } else { ?>
+      <li class="nav-item">
+        <a class="nav-link" href="?page=log-out">Log out</a>
+      </li>
+    <?php } ?>
+    
+  </ul>
  

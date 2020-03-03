@@ -6,16 +6,12 @@ class UsersController
     {
         $errors = [];
         if ($_POST) {
-            $user = UsersRepository::getUserByEmailAndPassword($_POST['email'], $_POST['password']); 
-            if ($user) {
-                $_SESSION['loggedIN'] = true;
+            $user = UsersRepository::getUserByEmailAndPassword($_POST['email'], $_POST['password']);
+            if ($user) { 
+                $_SESSION['loggedIn'] = true;
                 $_SESSION['first_name'] = $user->first_name;
                 $_SESSION['last_name'] = $user->last_name;
-                
-
-            }            
-            
-                
+                header('Location: ?page=super-secret');          
             } else {
                 $errors[] = 'Credentials are invalid';
             }
@@ -40,11 +36,9 @@ class UsersController
             }
 
         }
-        
-        
+                
         // dd($_POST); 
         // (svarīgi, lai reģistrācijas lapas formā būtu method būtu POST)
-
        
         return BaseView::generate('Users', 'registration', ['errors' => $errors]);
     }
