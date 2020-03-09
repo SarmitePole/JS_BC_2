@@ -1,5 +1,6 @@
+// templeita var būt rikia viens root elements
 <template>
-    <div>
+    <div class="container">
         <p>Hello, {{ name }}</p>
         <to-do-list></to-do-list>
     </div>

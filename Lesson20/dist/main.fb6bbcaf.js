@@ -8907,6 +8907,14 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
     taskk: {
@@ -8931,10 +8939,44 @@ exports.default = _default;
     "li",
     [
       _vm.taskk.isCompleted
-        ? _c("del", [_vm._v(_vm._s(_vm.taskk.title))])
-        : _c("sapn", [_vm._v(_vm._s(_vm.tasks.title) + "\n")])
+        ? [
+            _c(
+              "del",
+              {
+                on: {
+                  click: function($event) {
+                    _vm.taskk.isCompleted = !_vm.taskk.isCompleted
+                  }
+                }
+              },
+              [_vm._v(_vm._s(_vm.taskk.title))]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.$emit("task-deleted", _vm.taskk)
+                  }
+                }
+              },
+              [_vm._v("Delete")]
+            )
+          ]
+        : _c(
+            "span",
+            {
+              on: {
+                click: function($event) {
+                  _vm.taskk.isCompleted = !_vm.taskk.isCompleted
+                }
+              }
+            },
+            [_vm._v(_vm._s(_vm.taskk.title))]
+          )
     ],
-    1
+    2
   )
 }
 var staticRenderFns = []
@@ -8970,7 +9012,126 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/ToDoList.vue":[function(require,module,exports) {
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/NewTask.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      newTaskName: ''
+    };
+  },
+  methods: {
+    addTaskName: function addTaskName() {
+      var newTask = {
+        title: this.newTaskName,
+        isCompleted: false
+      };
+      this.newTaskName = '';
+      this.$emit('create-task', newTask);
+    }
+  }
+};
+exports.default = _default;
+        var $b49375 = exports.default || module.exports;
+      
+      if (typeof $b49375 === 'function') {
+        $b49375 = $b49375.options;
+      }
+    
+        /* template */
+        Object.assign($b49375, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.newTaskName,
+            expression: "newTaskName"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text" },
+        domProps: { value: _vm.newTaskName },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.newTaskName = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn-success", on: { click: _vm.addTaskName } },
+        [_vm._v("Add task")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$b49375', $b49375);
+          } else {
+            api.reload('$b49375', $b49375);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/ToDoList.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8979,6 +9140,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _Task = _interopRequireDefault(require("./Task.vue"));
+
+var _NewTask = _interopRequireDefault(require("./NewTask.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9001,9 +9164,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   components: {
-    Task: _Task.default
+    Task: _Task.default,
+    NewTask: _NewTask.default
   },
   data: function data() {
     return {
@@ -9018,6 +9186,15 @@ var _default = {
         isCompleted: false
       }]
     };
+  },
+  methods: {
+    deleteTask: function deleteTask(task) {
+      var index = this.todos.indexOf(task);
+      this.todos.splice(index, 1);
+    },
+    createTask: function createTask(newTask) {
+      this.todos.push(newTask);
+    }
   }
 };
 exports.default = _default;
@@ -9033,17 +9210,30 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "ul",
-      [
-        _vm._l(_vm.todos, function(task3) {
-          return [_c("task", { attrs: { taskk: task3 } })]
-        })
-      ],
-      2
-    )
-  ])
+  return _c(
+    "div",
+    [
+      _c(
+        "ul",
+        [
+          _vm._l(_vm.todos, function(task3) {
+            return [
+              _c("task", {
+                attrs: { taskk: task3 },
+                on: { "task-deleted": _vm.deleteTask }
+              })
+            ]
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("new-task", { on: { "create-task": _vm.createTask } })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -9078,7 +9268,7 @@ render._withStripped = true
       
       }
     })();
-},{"./Task.vue":"js/components/Task.vue","_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/App.vue":[function(require,module,exports) {
+},{"./Task.vue":"js/components/Task.vue","./NewTask.vue":"js/components/NewTask.vue","_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9090,6 +9280,7 @@ var _ToDoList = _interopRequireDefault(require("./ToDoList.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
 //
 //
 //
@@ -9130,6 +9321,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "container" },
     [
       _c("p", [_vm._v("Hello, " + _vm._s(_vm.name))]),
       _vm._v(" "),
@@ -9184,7 +9376,25 @@ new _vue.default({
   render: function render(createElement) {
     return createElement(_App.default);
   }
-}).$mount('#app');
+}).$mount('#app'); // //parsatā funkcija
+// function foo(param) {
+//     return1 123;
+// }
+// //arrow funkcija
+// foo(param) ({
+//     return (123)
+// })
+// //arrow funkcija
+// foo() = 123.
+// 1. Jāizveido indexedDB.html
+// 2. Jāizveido main.js un jāiekļauj idexe.html failā
+// 3. Main.js failā jāizveido VUE instance un jāiekļauj Vue
+// 4. Jāizveido App.vue komponentts un tas ir jāizmanto main.js failā
+// 5. App.vue failā jāizveido templeits - 4 pogas
+// 6. app.vue failā jāizveido data() funkcija, kurā jādefinē viens mainīgais
+// 7. App.vue failā templeitā jāizdrukā mainīgais izmantojot {{}}
+// 8. Katrai pogai jāpieliek @click="" events, kurā šim mainīgajam maina vērtību
+// 9. Piestilot lai ir smuki
 },{"vue":"node_modules/vue/dist/vue.runtime.esm.js","./components/App.vue":"js/components/App.vue"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -9213,7 +9423,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46443" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
