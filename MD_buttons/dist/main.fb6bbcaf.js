@@ -8542,7 +8542,74 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -8817,7 +8884,7 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"js/components/NewText.vue":[function(require,module,exports) {
+},{}],"js/components/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8830,143 +8897,6 @@ exports.default = void 0;
 //
 //
 //
-var _default = {
-  data: function data() {
-    return {
-      text: ''
-    };
-  },
-  methods: {
-    addText: function addText() {
-      var newText = this.value;
-      var text = text.newText;
-      this.$emit(text);
-    }
-  }
-};
-exports.default = _default;
-        var $500f78 = exports.default || module.exports;
-      
-      if (typeof $500f78 === 'function') {
-        $500f78 = $500f78.options;
-      }
-    
-        /* template */
-        Object.assign($500f78, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div")
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$500f78', $500f78);
-          } else {
-            api.reload('$500f78', $500f78);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"js/components/App.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _NewText = _interopRequireDefault(require("./NewText.vue"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 //
 //
 //
@@ -9019,23 +8949,38 @@ var _default = {
     return {
       text: 'not yet'
     };
+  },
+  methods: {
+    addText: function addText() {
+      var newText = this.value;
+      var text = text.newText;
+    },
+    btnClass: function btnClass() {
+      if (this.message == '') {
+        return 'red-btn';
+      }
+
+      return '';
+    }
   }
 };
 exports.default = _default;
-        var $ad9683 = exports.default || module.exports;
+        var $3924ad = exports.default || module.exports;
       
-      if (typeof $ad9683 === 'function') {
-        $ad9683 = $ad9683.options;
+      if (typeof $3924ad === 'function') {
+        $3924ad = $3924ad.options;
       }
     
         /* template */
-        Object.assign($ad9683, (function () {
+        Object.assign($3924ad, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container m-3" }, [
     _c("div", [
+      _c("h1", [_vm._v("hoho")]),
+      _vm._v(" "),
       _c(
         "button",
         {
@@ -9078,7 +9023,7 @@ exports.default = _default;
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _c("button", { staticClass: "btn-primary" }, [
+      _c("button", { staticClass: "btn-primary", class: _vm.btnClass() }, [
         _vm._v(
           "\n            There will be miracle - " +
             _vm._s(_vm.text) +
@@ -9115,9 +9060,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$ad9683', $ad9683);
+            api.createRecord('$3924ad', $3924ad);
           } else {
-            api.reload('$ad9683', $ad9683);
+            api.reload('$3924ad', $3924ad);
           }
         }
 
@@ -9128,7 +9073,7 @@ render._withStripped = true
       
       }
     })();
-},{"./NewText.vue":"js/components/NewText.vue","_css_loader":"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/main.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -9141,26 +9086,8 @@ new _vue.default({
   render: function render(createElement) {
     return createElement(_App.default);
   }
-}).$mount('#app'); // //parsatā funkcija
-// function foo(param) {
-//     return1 123;
-// }
-// //arrow funkcija
-// foo(param) ({
-//     return (123)
-// })
-// //arrow funkcija
-// foo() = 123.
-// 1. Jāizveido indexedDB.html
-// 2. Jāizveido main.js un jāiekļauj idexe.html failā
-// 3. Main.js failā jāizveido VUE instance un jāiekļauj Vue
-// 4. Jāizveido App.vue komponentts un tas ir jāizmanto main.js failā
-// 5. App.vue failā jāizveido templeits - 4 pogas
-// 6. app.vue failā jāizveido data() funkcija, kurā jādefinē viens mainīgais
-// 7. App.vue failā templeitā jāizdrukā mainīgais izmantojot {{}}
-// 8. Katrai pogai jāpieliek @click="" events, kurā šim mainīgajam maina vērtību
-// 9. Piestilot lai ir smuki
-},{"vue":"node_modules/vue/dist/vue.runtime.esm.js","./components/App.vue":"js/components/App.vue"}],"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}).$mount('#app');
+},{"vue":"node_modules/vue/dist/vue.runtime.esm.js","./components/App.vue":"js/components/App.vue"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9188,7 +9115,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59933" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41382" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -9364,5 +9291,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
 //# sourceMappingURL=/main.fb6bbcaf.js.map
