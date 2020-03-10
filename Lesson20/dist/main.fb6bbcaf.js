@@ -8542,7 +8542,7 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{}],"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -8574,7 +8574,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -8609,7 +8609,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{"./bundle-url":"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -8923,14 +8923,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $14bc1d = exports.default || module.exports;
+        var $784a30 = exports.default || module.exports;
       
-      if (typeof $14bc1d === 'function') {
-        $14bc1d = $14bc1d.options;
+      if (typeof $784a30 === 'function') {
+        $784a30 = $784a30.options;
       }
     
         /* template */
-        Object.assign($14bc1d, (function () {
+        Object.assign($784a30, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -8999,9 +8999,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$14bc1d', $14bc1d);
+            api.createRecord('$784a30', $784a30);
           } else {
-            api.reload('$14bc1d', $14bc1d);
+            api.reload('$784a30', $784a30);
           }
         }
 
@@ -9012,7 +9012,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/NewTask.vue":[function(require,module,exports) {
+},{"_css_loader":"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/NewTask.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9058,14 +9058,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $b49375 = exports.default || module.exports;
+        var $c800cd = exports.default || module.exports;
       
-      if (typeof $b49375 === 'function') {
-        $b49375 = $b49375.options;
+      if (typeof $c800cd === 'function') {
+        $c800cd = $c800cd.options;
       }
     
         /* template */
-        Object.assign($b49375, (function () {
+        Object.assign($c800cd, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -9122,9 +9122,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$b49375', $b49375);
+            api.createRecord('$c800cd', $c800cd);
           } else {
-            api.reload('$b49375', $b49375);
+            api.reload('$c800cd', $c800cd);
           }
         }
 
@@ -9198,14 +9198,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $6ab5f0 = exports.default || module.exports;
+        var $b60354 = exports.default || module.exports;
       
-      if (typeof $6ab5f0 === 'function') {
-        $6ab5f0 = $6ab5f0.options;
+      if (typeof $b60354 === 'function') {
+        $b60354 = $b60354.options;
       }
     
         /* template */
-        Object.assign($6ab5f0, (function () {
+        Object.assign($b60354, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -9255,9 +9255,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$6ab5f0', $6ab5f0);
+            api.createRecord('$b60354', $b60354);
           } else {
-            api.reload('$6ab5f0', $6ab5f0);
+            api.reload('$b60354', $b60354);
           }
         }
 
@@ -9268,7 +9268,7 @@ render._withStripped = true
       
       }
     })();
-},{"./Task.vue":"js/components/Task.vue","./NewTask.vue":"js/components/NewTask.vue","_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/App.vue":[function(require,module,exports) {
+},{"./Task.vue":"js/components/Task.vue","./NewTask.vue":"js/components/NewTask.vue","_css_loader":"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9307,14 +9307,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $e80c0d = exports.default || module.exports;
+        var $8c45bb = exports.default || module.exports;
       
-      if (typeof $e80c0d === 'function') {
-        $e80c0d = $e80c0d.options;
+      if (typeof $8c45bb === 'function') {
+        $8c45bb = $8c45bb.options;
       }
     
         /* template */
-        Object.assign($e80c0d, (function () {
+        Object.assign($8c45bb, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -9350,9 +9350,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$e80c0d', $e80c0d);
+            api.createRecord('$8c45bb', $8c45bb);
           } else {
-            api.reload('$e80c0d', $e80c0d);
+            api.reload('$8c45bb', $8c45bb);
           }
         }
 
@@ -9363,7 +9363,7 @@ render._withStripped = true
       
       }
     })();
-},{"./ToDoList.vue":"js/components/ToDoList.vue","_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/main.js":[function(require,module,exports) {
+},{"./ToDoList.vue":"js/components/ToDoList.vue","_css_loader":"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -9395,7 +9395,7 @@ new _vue.default({
 // 7. App.vue failā templeitā jāizdrukā mainīgais izmantojot {{}}
 // 8. Katrai pogai jāpieliek @click="" events, kurā šim mainīgajam maina vērtību
 // 9. Piestilot lai ir smuki
-},{"vue":"node_modules/vue/dist/vue.runtime.esm.js","./components/App.vue":"js/components/App.vue"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.runtime.esm.js","./components/App.vue":"js/components/App.vue"}],"../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9423,7 +9423,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35855" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51573" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -9599,5 +9599,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
+},{}]},{},["../../../../Users/PolePolePole/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
 //# sourceMappingURL=/main.fb6bbcaf.js.map
