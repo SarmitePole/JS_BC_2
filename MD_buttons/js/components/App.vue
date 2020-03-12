@@ -62,12 +62,12 @@ export default {
     
     methods: {       
         addText() {
-            let newText = this.value;
-            let text = text . newText;
+            newText = this.value;
+            text = text . newText;
             
         },
         btnClass() {
-            if (this.message == '') {
+            if (this.value == 'Lovīte') {
                 return 'red-btn'
             }
             return '';

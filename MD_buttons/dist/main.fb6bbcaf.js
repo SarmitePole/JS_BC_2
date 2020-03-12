@@ -8952,11 +8952,11 @@ var _default = {
   },
   methods: {
     addText: function addText() {
-      var newText = this.value;
-      var text = text.newText;
+      newText = this.value;
+      text = text.newText;
     },
     btnClass: function btnClass() {
-      if (this.message == '') {
+      if (this.value == 'Lovīte') {
         return 'red-btn';
       }
 
@@ -9115,7 +9115,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41382" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38661" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
