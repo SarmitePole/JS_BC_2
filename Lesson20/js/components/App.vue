@@ -1,4 +1,4 @@
-// templeita var būt rikia viens root elements
+// templeita var būt tikai viens root elements
 <template>
     <div class="container">
         <p>Hello, {{ name }}</p>
