@@ -8840,19 +8840,12 @@ exports.default = void 0;
 //
 //
 //
-//
-//
 var _default = {
   data: function data() {
     return {
       shouldShowSomething: false,
       currentText: "Edit me"
     };
-  },
-  methods: {
-    newText: function newText() {
-      this.value = currentText;
-    }
   }
 };
 exports.default = _default;
@@ -8870,27 +8863,28 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.shouldShowSomething
-      ? _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.newText,
-              expression: "newText"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", id: "input", value: "" },
-          domProps: { value: _vm.newText },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+      ? _c("div", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.currentText,
+                expression: "currentText"
               }
-              _vm.newText = $event.target.value
+            ],
+            attrs: { type: "text" },
+            domProps: { value: _vm.currentText },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.currentText = $event.target.value
+              }
             }
-          }
-        })
+          })
+        ])
       : _vm._e(),
     _vm._v(" "),
     _c("br"),
@@ -8902,6 +8896,13 @@ exports.default = _default;
           click: function($event) {
             _vm.shouldShowSomething = !_vm.shouldShowSomething
           }
+        },
+        model: {
+          value: _vm.currentText,
+          callback: function($$v) {
+            _vm.currentText = $$v
+          },
+          expression: "currentText"
         }
       },
       [_vm._v(_vm._s(_vm.currentText))]
@@ -8979,7 +8980,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53430" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58210" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

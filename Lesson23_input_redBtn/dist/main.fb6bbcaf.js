@@ -8942,14 +8942,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $3341fd = exports.default || module.exports;
+        var $6d4393 = exports.default || module.exports;
       
-      if (typeof $3341fd === 'function') {
-        $3341fd = $3341fd.options;
+      if (typeof $6d4393 === 'function') {
+        $6d4393 = $6d4393.options;
       }
     
         /* template */
-        Object.assign($3341fd, (function () {
+        Object.assign($6d4393, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -9008,9 +9008,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$3341fd', $3341fd);
+            api.createRecord('$6d4393', $6d4393);
           } else {
-            api.reload('$3341fd', $3341fd);
+            api.reload('$6d4393', $6d4393);
           }
         }
 
@@ -9063,7 +9063,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64008" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58895" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

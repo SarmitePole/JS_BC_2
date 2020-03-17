@@ -1,16 +1,14 @@
 <template>
     <div>    
-        <input 
-            type="text"
-            class="form-control"
-            v-if="shouldShowSomething"
-            v-model="newText"
-            id="input"
-            value=""
-        >
+        <div v-if="shouldShowSomething">
+            <input type="text" v-model="currentText">
+        </div>
+        
         <br>
+
         <button 
            @click="shouldShowSomething = !shouldShowSomething"
+           v-model="currentText"
         >{{ currentText }}</button>
     </div>
 </template>
@@ -22,15 +20,10 @@ export default {
     data() {
         return {
             shouldShowSomething: false,
-            currentText: "Edit me"
+            currentText: "Edit me",
+            
         };
     },
-
-    methods: {
-        newText() {
-            this.value = currentText;
-        }
-    }
     
 }
 
