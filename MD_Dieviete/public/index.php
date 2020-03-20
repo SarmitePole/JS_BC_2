@@ -20,12 +20,6 @@ switch ($page) {
     case 'home':
         echo (new HomeController)->index();
         break;
-    case 'posts':
-        echo (new PostsController)->index();
-        break;
-    case 'post':
-        echo (new PostsController)->viewPost();
-        break;
     case 'articles':
         echo (new ArticlesController)->index();
         break;

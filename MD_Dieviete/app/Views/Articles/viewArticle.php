@@ -29,33 +29,34 @@
 
     <div class="row">
         <div class="col-sm text-center">
-        <h6><?php echo $article->intro; ?></h6>
+        <h6><?= $article->intro; ?></h6>
         </div>
     </div>
 
+   
     <div class="row mb-3 d-sm-flex">
         <div class="col-sm-2 mx-auto">
-            <img src="\myProject\MD_Dieviete\app\Views\Articles\Images\shoes1.png"  alt="Picture of shoes">
+        <?= '<img src="' . $article->img1 . '">';?>
         </div>
         <div class="col-sm-2 mx-auto">
-            <img src="\myProject\MD_Dieviete\app\Views\Articles\Images\shoes2.png"  alt="Picture of shoes">
+        <?= '<img src="' . $article->img2 . '">';?>
         </div>
         <div class="col-sm-2 mx-auto">
-            <img src="\myProject\MD_Dieviete\app\Views\Articles\Images\shoes1.png"  alt="Picture of shoes">
+        <?= '<img src="' . $article->img1 . '">';?>
         </div>
         <div class="col-sm-2 mx-auto">
-            <img src="\myProject\MD_Dieviete\app\Views\Articles\Images\shoes2.png"  alt="Picture of shoes">
+        <?= '<img src="' . $article->img2 . '">';?>
         </div>
     </div>
         
     <div class="row">
         <div class="col-sm">
-        <p><?php echo $article->text; ?></p>
-        <p><?php echo $article->text; ?></p>
-        <p><?php echo $article->text; ?></p>
-        <p><?php echo $article->text; ?></p>
-        <p><?php echo $article->text; ?></p>
-        <p><?php echo $article->text; ?></p>
+        <p><?= $article->text; ?></p>
+        <p><?= $article->text; ?></p>
+        <p><?= $article->text; ?></p>
+        <p><?= $article->text; ?></p>
+        <p><?= $article->text; ?></p>
+        <p><?= $article->text; ?></p>
         </div>
     </div>
 

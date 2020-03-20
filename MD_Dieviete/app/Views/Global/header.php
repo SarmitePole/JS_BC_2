@@ -24,9 +24,6 @@
             <a class="nav-link text-white" href="?page=contact-us">Contact Us</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="?page=posts">Posts</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link text-white" href="?page=articles">Articles</a>
         </li>
         <?php if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']) { ?>
