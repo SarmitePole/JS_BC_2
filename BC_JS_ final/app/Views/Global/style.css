@@ -1,0 +1,95 @@
+.header {
+    position: relative;
+    height: 0px;
+}
+
+/* bredcrumb knābītis*/
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+}
+
+/* chat.html */
+#wrapper {
+    width: 100vh;
+    height: 30vw;
+    border: 1px solid rgb(173, 173, 243);
+    background-color: rgb(230, 230, 243);
+    overflow-y:scroll;
+    font-size: 14px;
+}
+#chatUserInputField {
+    width: 100vh;
+    border: 1px solid rgb(173, 173, 243);
+    background-color: rgb(230, 230, 243);
+    font-size: 12px;
+}
+
+#userNameInput {
+    width: 30vh;
+    border: 1px solid rgb(173, 173, 243);
+}
+
+#messageInput {
+    height: 10vh;
+    width: 30vw;
+    border: 1px solid rgb(173, 173, 243);
+    overflow-y:scroll;
+}
+
+/* main.html */
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+#card {
+    max-width: 540px;
+    background-color: rgb(230, 230, 243);
+    
+}
+
+/* for all */
+img {
+    max-width: 100%
+}
+
+/* mainArticles1 */
+.small-image {
+    cursor: pointer;
+}
+
+.footer {
+    position: relative; 
+}
+
+/* register */
+#validationBox {
+    width: 80vw;
+    height: 20vh;
+}
+
+/* About Us MAp */
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:100%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+#aboutUs {
+    font-size: 14px
+}
+
+/* footer*/
+.navbar-brand.footer.text-info {
+    font-size: 12px;
+    
+}

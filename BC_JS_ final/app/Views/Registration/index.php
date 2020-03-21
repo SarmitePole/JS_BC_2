@@ -1,4 +1,12 @@
 <div class="container">
+   
+    <div>
+        <p>some useless text  to delete later</p>
+    </div>
+    <div>
+        <p>some useless text  to delete later</p>
+    </div>
+
     <div class="row">
         <div class="col">
             <h4>This is place for safe registration</h4>

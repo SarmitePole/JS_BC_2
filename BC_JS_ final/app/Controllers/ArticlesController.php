@@ -13,7 +13,12 @@ class ArticlesController
     {
         $articleID = $_GET['id'] ?? 0;
         $article = ArticlesRepository::getArticle($articleID);
-     
+
+        // Jānim ir šitā
+        // $id = $_GET['id'];
+        // $article = ArticlesRepository::getArticle($id);
+
+      
         return BaseView::generate('Articles', 'viewArticle', ['article' => $article]);
     }
 }

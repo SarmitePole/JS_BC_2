@@ -17,10 +17,6 @@ class User
                 $errors[] = 'Email must be valid email adress.';
             }
 
-            if (UsersRepository::getUserByEmail($data['email'])) {
-                $errors[] = 'Email is alredy registered';
-            }
-
             if (!$data['first-name']) {
                 $errors[] = 'First name is required. ';
             }
@@ -34,7 +30,7 @@ class User
             }
 
             if ($data['password'] != $data['password2']) {
-                $errors[] = 'Passwords must match. ';
+                $errors[] = 'Passwords should match. ';
             }
 
         return $errors;
