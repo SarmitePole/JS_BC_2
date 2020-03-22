@@ -9,7 +9,7 @@
             <div class="col">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent">
-                        <li class="breadcrumb-item"><a class="black-text" href="main.html">Home</a></li>
+                        <li class="breadcrumb-item"><a class="black-text" href="?">Home</a></li>
                         <li class="breadcrumb-item active">About Us</li>
                     </ol>
                 </nav>
@@ -28,7 +28,7 @@
                 <div class="card mb-3 h-100">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="Pictures/Legal1.jpg" class="card-img" alt="...">
+                            <img src="../public/images/Legal1.jpg" class="card-img" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -42,7 +42,7 @@
                 <div class="card mb-3 h-100">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="Pictures/Legal2.jpg" class="card-img" alt="...">
+                            <img src="../public/images/Legal2.jpg" class="card-img" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -56,7 +56,7 @@
                 <div class="card mb-3 h-100">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="Pictures/Legal3.jpg" class="card-img" alt="...">
+                            <img src="../public/images/Legal3.jpg" class="card-img" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">

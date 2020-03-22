@@ -7,7 +7,7 @@
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent">
-                    <li class="breadcrumb-item"><a class="black-text" href="main.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="?">Home</a></li>
                     <li class="breadcrumb-item active">Chat</li>
                 </ol>
                 </nav>

@@ -21,7 +21,6 @@ class ArticlesRepository
         
         $query = DB::$connection->prepare("SELECT * FROM articles WHERE id = :id");
         $query->execute(['id' =>$id]);
-
     
         $article = $query->fetchObject('Article');
     
@@ -32,4 +31,5 @@ class ArticlesRepository
         return $article;
     }
 
+    
 }

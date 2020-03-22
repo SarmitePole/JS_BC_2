@@ -13,7 +13,7 @@ require_once '../app/Controllers/ErrorsController.php';
 
 require_once '../app/Repositories/ArticlesRepository.php';
 require_once '../app/Repositories/CardsRepository.php';
-require_once '../app/Repositories/CarouselRepository.php';
+require_once '../app/Repositories/CarouselsRepository.php';
 require_once '../app/Repositories/DB.php';
 require_once '../app/Repositories/UsersRepository.php';
 
@@ -30,7 +30,7 @@ function dd($data)
 }
 
 
-// Darbam no Workbenča------------
+// Darbam no mājām no Workbenča------------
 
 $host="localhost";
 $port=3306;

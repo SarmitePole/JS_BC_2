@@ -59,10 +59,6 @@ img {
     cursor: pointer;
 }
 
-.footer {
-    position: relative; 
-}
-
 /* register */
 #validationBox {
     width: 80vw;
@@ -89,7 +85,6 @@ img {
 }
 
 /* footer*/
-.navbar-brand.footer.text-info {
-    font-size: 12px;
-    
+.footer {
+    position: relative; 
 }

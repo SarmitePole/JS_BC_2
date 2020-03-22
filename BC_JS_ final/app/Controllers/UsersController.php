@@ -14,12 +14,13 @@ class UsersController
                 UsersRepository::createUser($_POST);
                 header('Location: ?page=login');
             }
+            
         }
                 
         // dd($_POST); 
         // (svarīgi, lai reģistrācijas lapas formā būtu method būtu POST)
        
-        return BaseView::generate('Registration', 'index', ['errors' => $errors]);
+        return BaseView::generate('Registration', 'index');
     }
 
 }

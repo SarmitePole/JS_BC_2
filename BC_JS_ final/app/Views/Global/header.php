@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar navbar-light bg-light fixed-top">
       <a class="navbar-brand" href="#">
-        <img src="Pictures\LogoN.png" width="160" alt="">
+        <img src="..\public\images\LogoN.png" width="160" alt="">
       </a>
       <ul class="nav justify-content-end">
         <li class="nav-item">

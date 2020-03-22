@@ -6,4 +6,6 @@ class HomeController
     {
         return BaseView::generate('Home', 'index');
     }
+
+    
 }
