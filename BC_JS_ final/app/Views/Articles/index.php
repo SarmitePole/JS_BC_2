@@ -35,7 +35,9 @@ no
             <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <a data-fancybox="gallery1" href=""><?php echo '<img src="' . $article->img1 . '">'; ?></a>
+                    <a data-fancybox="gallery1" href="">
+                    <?php echo '<img src="' . $article->img1 . '">'; ?>
+                    </a>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">

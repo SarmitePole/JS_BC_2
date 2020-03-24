@@ -5,7 +5,7 @@ class User
     public $email;
     public $first_name;
     public $last_name;
-
+    
     public static function validate (array $data): array
     {
         $errors = [];
@@ -15,6 +15,10 @@ class User
 
             if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
                 $errors[] = 'Email must be valid email adress.';
+            }
+
+            if (UsersRepository::getUserByEmail($data['email'])) {
+                $errors[] = 'Email is alredy registered';
             }
 
             if (!$data['first-name']) {

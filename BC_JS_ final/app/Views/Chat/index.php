@@ -2,10 +2,10 @@
     <p>Some invisible text</p>
 </div>
 
-<div class="container content my-1">
-    <div class="row">
-        <div class="col">
-            <nav aria-label="breadcrumb">
+<div class="container justify-content-center m-3">
+    <div class="row justify-content-center m-3">
+        <div class="col-md justify-content-center m-3">
+            <nav aria-label="breadcrumb justify-content-center m-3">
                 <ol class="breadcrumb bg-transparent">
                     <li class="breadcrumb-item"><a class="black-text" href="?">Home</a></li>
                     <li class="breadcrumb-item active">Chat</li>

@@ -4,8 +4,14 @@ class HomeController
 {
     public function index(): string 
     {
-        return BaseView::generate('Home', 'index');
-    }
+        $carousels = CarouselsRepository::getCarousels(); 
+       
+        
+        $cards = CardsRepository::getCards(); 
+       
+        return BaseView::generate('Home', 'index', ['cards' => $cards, 'carousels' => $carousels]);
 
+       
+    }
     
 }
