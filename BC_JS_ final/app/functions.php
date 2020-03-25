@@ -30,8 +30,6 @@ function dd($data)
 }
 
 
-// Darbam no mājām no Workbenča------------
-
 $host="localhost";
 $port=3306;
 $socket="";

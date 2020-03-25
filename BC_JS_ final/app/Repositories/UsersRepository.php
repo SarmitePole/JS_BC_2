@@ -24,7 +24,7 @@ class UsersRepository
             'firstName' => $data['first-name'],
             'lastName' => $data['last-name'],
             'password' => md5($data['password']),
-            // 'password' => $data['password'],
+            
         ]);
     }
 

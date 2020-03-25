@@ -67,7 +67,7 @@
         foreach ($cards as $card) {
         ?>
         
-        <div class="col-md-3 card bg-light m-1 h-10" id="card">
+        <div class="col-md-3 card " id="card">
              
             <div class="row">
                 
@@ -75,12 +75,12 @@
                     <?php echo '<img src="' . $card->img1 . '">';?>
                 </div>
 
-                <div class="col-md card h-100">
+                <div class="col-md m-1 card">
                     <div class="card-body">
                         <h5 class="card-title"><a href="?page=articles">
                         <?php echo '<p>' . $card->title . '</p>';?>
                         </a></h5>
-                        <p class="card-text ">
+                        <p class="card-text">
                         <?php echo '<p>' . $card->text . '</p>';?>
                         </p>                              
                     </div>
