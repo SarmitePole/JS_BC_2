@@ -18,8 +18,8 @@
         </div>
     </div>
     
-    <div class="tabs">
-        <div id="tabs">
+    <div class="container">
+        <div class="nav-tabs" id="tabs">
             <ul>
                 <li><a href="#tabs-1">Agreement with target person</a></li>
                 <li><a href="#tabs-2">Agreement with close relatives</a></li>

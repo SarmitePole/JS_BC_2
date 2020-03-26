@@ -10,10 +10,10 @@
     <p> no </p>
 </div>
 
-<div class="container">
+<div class="container sticky-top">
     <div class="row m-5">
         <div class="col-10 justify-content-center h-50"></div>
-            <div id="carouselExampleIndicators" class="carousel slide mx-auto" style="width: 800px;" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide mx-auto" style="width: 1500px;" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -59,7 +59,7 @@
 <div>
 
 
-<div class="container mx-auto">
+<div class="container mx-auto" id="cardsRow">
      
     <div class="row"> 
 
@@ -67,15 +67,12 @@
         foreach ($cards as $card) {
         ?>
         
-        <div class="col-md-3 card " id="card">
+        <div class="col-sm-3 card" id="card">
              
             <div class="row">
                 
-                <div class="card-img-top">      
+                <div class="col-sm card-img-top m-3">      
                     <?php echo '<img src="' . $card->img1 . '">';?>
-                </div>
-
-                <div class="col-md m-1 card">
                     <div class="card-body">
                         <h5 class="card-title"><a href="?page=articles">
                         <?php echo '<p>' . $card->title . '</p>';?>
@@ -84,8 +81,9 @@
                         <?php echo '<p>' . $card->text . '</p>';?>
                         </p>                              
                     </div>
+
                 </div>
-                
+
             </div>    
                        
         </div> 

@@ -3,63 +3,72 @@
     height: 0px;
 }
 
-/* bredcrumb knābītis*/
+/* bredcrumb*/
 .breadcrumb-item+.breadcrumb-item::before {
     content: ">";
 }
 
-/* chat.html */
-#wrapper {
-    width: 100vh;
-    height: 30vw;
-    border: 1px solid rgb(173, 173, 243);
-    background-color: rgb(230, 230, 243);
-    overflow-y:scroll;
-    font-size: 14px;
-}
-#chatUserInputField {
-    width: 100vh;
-    border: 1px solid rgb(173, 173, 243);
-    background-color: rgb(230, 230, 243);
-    font-size: 12px;
+/* for all */
+img {
+    max-width: 100%;
 }
 
-#userNameInput {
-    width: 30vh;
-    border: 1px solid rgb(173, 173, 243);
-}
 
-#messageInput {
-    height: 10vh;
-    width: 30vw;
-    border: 1px solid rgb(173, 173, 243);
-    overflow-y:scroll;
-}
-
-/* main.html */
+/* home */
 .carousel-indicators li {
     width: 10px;
     height: 10px;
     border-radius: 100%;
 }
 
+#cardsRow {
+    width: 100vw;
+}
+
 #card {
-    max-width: 540px;
-    background-color: rgb(230, 230, 243);
-    
+    background-color: rgb(230, 230, 243)!important;
 }
 
-/* for all */
-img {
-    max-width: 100%
-}
 
-/* mainArticles1 */
+
+/* Articles */
 .small-image {
     cursor: pointer;
 }
 
-/* register */
+/* Chat */
+#wrapper {
+    width: 100vw;
+    height: 30vh;
+    border: 1px solid rgb(173, 173, 243);
+    background-color: rgb(230, 230, 243);
+    overflow-y:scroll;
+    font-size: 14px;
+}
+
+#chatUserInputField {
+    width: 100vw;
+    height: 30vh;
+    border: 1px solid rgb(173, 173, 243);
+    background-color: rgb(230, 230, 243);
+    font-size: 12px;
+}
+
+#userNameInput {
+    width: 30vw;
+    height: 10vh;
+    border: 1px solid rgb(173, 173, 243);
+    overflow-y:scroll;
+}
+
+#messageInput {
+    width: 30vw;
+    height: 10vh;
+    border: 1px solid rgb(173, 173, 243);
+    overflow-y:scroll;
+}
+
+/* Registration */
 #validationBox {
     width: 80vw;
     height: 20vh;
