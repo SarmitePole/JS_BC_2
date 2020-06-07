@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="mainLogin.css">
+</head>
+<body>
+    <h1>Jauna konta izveide</h1>
+    <p>Tas ir ātri un vienkārši</p>
+    <input class="medium" type="text" value="Vārds">
+    <!-- nevaru sataisīt, lai "Vārds" un "Uzvārds" stāv tuvāk blakus -->
+    <input class="medium" type="text" value="Uzvārds" float="left"><br>
+    <input class="big" type="text" value="Mobilā tālruņa numurs vai e-pasta adrese" width=""><br>
+    <input class="big" type="text" value="Jaunā parole">
+
+    <!-- "Dzimšanas diena" un ievades lauku gribu tuvāk kopā -->
+    <p class="input-title"><strong>Dzimšanas diena</strong></p>
+
+    <!-- Border nezkapēc ir ar ēnam, nevaru atrast, kurā vieta es tādu esmu prasījusi -->
+
+    <div class="birth-input">
+ 
+        <select name="year">
+            <option>1350</option>
+            <option>1590</option>
+            <option>1818</option>
+            <option>1990</option>
+            <option>2008</option>
+        </select>
+
+        <select name="date">
+            <option>1</option>
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+        </select>
+
+        <select name="month">
+            <option>Jan</option>
+            <option>Mar</option>
+            <option>May</option>
+            <option>Aug</option>
+            <option>Dec</option>
+        </select>
+
+    </div>
+
+    <!-- "Dzimums" un ievades lauku gribu tuvāk kopā -->
+    <p class="input-title" class="gender-input"><strong>Dzimums</strong></p>
+
+    <form>
+        <input type="radio" name="gender"> Sieviete
+        <input type="radio" name="gender"> Vīrietis
+        <input type="radio" name="gender"> Pielāgots
+    </form>
+
+    <p class="info">By clicking Reģistrēties, you agree to our Terms. Learn how we collect, use and share your data in our Datu politika and how we use cookies and similar technology in our Cookies Policy. You may receive SMS Notifications from us and can opt out any time.</p>
+
+    <input type="submit" value="Reģistrēties" class="medium" id="submit">
+    
+</body>
+</html>

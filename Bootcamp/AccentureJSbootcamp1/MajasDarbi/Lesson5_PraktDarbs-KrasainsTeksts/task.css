@@ -1,0 +1,27 @@
+* {
+    color: green;
+}
+
+.red-p {
+    color: red;
+}
+
+.blue-p {
+    color: blue;
+}
+
+.blue-p span {
+    color: yellow;
+}
+
+strong span {
+    color: pink;
+}
+
+[data-foo] {
+    color: violet;
+}
+
+.super-strange-paragraph:hover span {
+    color:red;
+}

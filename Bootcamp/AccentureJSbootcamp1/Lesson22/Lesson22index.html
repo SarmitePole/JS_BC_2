@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="app">
+
+        {{ message }}
+        <div>
+            <input type="text"
+            v-model="message">
+        </div>
+
+        <!-- <button v-on:click="changeText()">
+            click me
+        </button> -->
+
+        <button @keyup.enter="changeText()">
+            click me
+        </button>
+
+        <hr>
+        <p>ToDoList aplikācija</p>
+
+        <div>
+            <ul>
+                <li v-for="task in tasks" @click="task.isCompleted = !task.isCompleted">
+                    <del v-if="task.isCompleted">{{ task.title }}</del>
+                    <span v-else>{{ task.title }}</span>
+                </li>
+            </ul>
+            <div>
+                <label for="nev task">New Task</label>
+                <input type="text" id="new-task" v-model="newTaskName" @keyup.enter="addTask()">
+                <div>
+                    <button @click= "addTask()">Add new</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="Lesson22main.js"></script>
+</body>
+</html>

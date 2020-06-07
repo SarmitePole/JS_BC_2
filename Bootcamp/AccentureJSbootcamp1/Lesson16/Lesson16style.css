@@ -1,0 +1,26 @@
+.tabs-wrapper {
+    border: 1px solid #cccc;
+}
+
+.tabs-head {
+    border-bottom: 1px solid #cccc;
+}
+
+.tabs-head a {
+    padding-left: 20px;
+    color: pink;
+    text-decoration: none;
+}
+
+.tabs-head a.active {
+   text-decoration: underline;
+   font-weight: bold
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}

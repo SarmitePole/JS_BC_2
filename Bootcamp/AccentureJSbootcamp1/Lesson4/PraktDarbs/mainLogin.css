@@ -1,0 +1,64 @@
+*:not(input):not(select):not(#submit) {
+    background-color: rgb(215, 219, 226);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+input:not(.submit) {
+    border: 1px solid rgb (189, 199, 216);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 8px;
+    padding: 8px;
+    color: rgb(168, 170, 172);
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+input:focus {
+    border-color: rgb(238, 53, 53);
+}
+
+.medium {
+    width: 172px;
+}
+
+.big {
+    width: 377px;
+}
+
+.tiny {
+    width: 30px;
+}
+
+select {
+    margin: 8px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.gender-input {
+    font-size: 80px;
+}
+
+.input-title {
+    color: #8f8e8c;
+}
+
+.info {
+    font-size: 11px;
+    color: rgb(119, 119, 119)
+}
+
+#submit {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(rgb(121, 188, 100), rgb(87, 136, 67));
+    border-radius: 5px;
+    font-size: 19px;
+    border: solid 1px rgb(59, 110, 34);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    box-shadow: rgb(164, 227, 136) 0px 1px 1px 0px;
+}

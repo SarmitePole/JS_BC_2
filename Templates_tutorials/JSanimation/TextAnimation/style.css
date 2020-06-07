@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(211, 168, 168);
+    opacity: 0.1;
+}
+
+h1 {
+    color:white;
+    font-size: 4rem;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 100vh;
+}
+
+span {
+    opacity: 1;
+    transition: all 5s ease;
+    transform: translateY(350px);
+    display: inline-block;
+}
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+    color: blue;
+}

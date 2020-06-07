@@ -1,0 +1,101 @@
+.container1 div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid rgb(100, 100, 100);
+}
+
+.box1 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+.box2 {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    background-color: pink;
+}
+
+.box3 {
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.container2 div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid red;
+    position:absolute;
+}
+
+.box4 {
+    background-color: red;
+    top: 100px;
+    left: 100px;
+}
+
+.box5 {
+    background-color: blue;
+    top: 125px;
+    left: 125px;
+}
+
+.box6 {
+    background-color: green;
+    top: 150px;
+    left: 150px;
+    z-index: 6;
+}
+
+.container3 div {
+    border: 1px solid pink;
+    float: left;
+}
+
+.box7, .box9 {
+    width: 25%;
+}
+
+.box8 {
+    width: 49%;
+}
+
+.body {
+    margin: 0px;
+}
+
+.box10 {
+    width: 100%;
+}
+
+.container4 {
+    clear: both;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 500px;
+    space-around;
+}
+.container4 div {
+    border: 1px solid purple;
+    flex-basis: 30%;
+}
+
+.box11 {
+    order: 3;
+}
+
+body {
+    background: green;
+}
+
+@media(max-width: 768px) {
+    body {
+        background: red;
+    }
+}

@@ -1,0 +1,35 @@
+.jumbotron-fluid {
+    text-align: center;
+    background-color: white;
+    padding-bottom: 2px;
+}
+
+.two-buttons {
+    margin: 40px;
+}
+
+.btn-primary {
+    margin: 4px;
+}
+
+.btn-secondary {
+    margin: 4px;
+}
+
+.card-title {
+    background-color: #55595c;
+    color: white;
+    height: 150px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.btn-outline {
+    border: 1px solid;
+    margin: 0px;
+}
+
+.all-thumbnail {
+    background-color: rgb(200, 200, 200);
+    margin: 15px;
+}

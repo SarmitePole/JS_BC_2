@@ -1,0 +1,134 @@
+//
+<style type='text/scss'>
+
+  .header{
+    text-align: center;
+  }
+  .blog-post, h2 {
+    color: red;
+
+  @mixin border-radius($radius){ 
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+    }
+  #awesome {
+    @include border-radius(15px);
+  }
+
+</style>
+
+<div id="awesome"></div>
+
+  }
+</style>
+
+<h1 class="header">Learn Sass</h1>
+<div class="blog-post">
+  <h2>Some random title</h2>
+  <p>This is a paragraph with some random text in it</p>
+</div>
+<div class="blog-post">
+  <h2>Header #2</h2>
+  <p>Here is some more random text.</p>
+</div>
+<div class="blog-post">
+  <h2>Here is another header</h2>
+  <p>Even more random text within a paragraph</p>
+</div>
+
+// xxxxxxxxxxxxxxxxxxxxxx
+<style type='text/scss'>
+  @mixin border-stroke($val) { 
+    @if $val == light {
+      border: 1px solid black;
+    }
+    @else if $val == medium {
+      border: 3px solid black;
+    }
+    @else if $val == heavy {
+      border: 6px solid black;
+    }
+    @else {
+      border: none;
+    }
+  }
+
+  #box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    @include border-stroke(medium);
+  }
+</style>
+
+<div id="box"></div>
+
+// xxxxxxxxxxxxxxxxxxxxxx
+<style type='text/scss'>
+@for $j from 1 to 6 {
+  .text-#{$j} { font-size: 15px * $j; }
+}
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
+
+// xxxxxxxxxxxxxxxxxxxxxx
+<style type='text/sass'>
+
+  @each $color in blue, black, red {
+    .#{$color}-bg {background-color: $color;}
+  }
+  
+  div {
+    height: 200px;
+    width: 200px;
+  }
+
+</style>
+
+<div class="blue-bg"></div>
+<div class="black-bg"></div>
+<div class="red-bg"></div>
+
+// xxxxxxxxxxxxxxxxxxxxxx
+<style type='text/scss'>
+
+$x: 1;
+@while $x < 6 {
+  .text-#{$x} { font-size: 15px * $x;}
+  $x: $x + 1;
+}
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
+
+
+
+<style type='text/scss'>
+  h3{
+    text-align: center;
+  }
+  .info{
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+  .info-important{
+  @extend .info;
+  background-color: magenta;
+  
+}
+
+

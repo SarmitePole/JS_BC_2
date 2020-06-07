@@ -1,0 +1,131 @@
+
+/* for all */
+img {
+    max-width: 100%;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(123, 165, 207);
+}
+
+.small-image {
+    height: 10vh;
+    cursor: pointer;
+} 
+
+.flex-container {
+    display: flex;
+    /* flex-shrink: 4; */
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+  
+.flex-container > div {
+    background-color: #ecdba2;
+}
+
+/* Interior examples */
+
+#interior > div {
+    height: 10vh;
+    margin: 10px 2px;
+    padding: 5px; 
+    width: 15vw;
+}
+
+#interior > div:hover {
+    background-color: rgb(97, 95, 107);
+    padding: 5px;
+}
+
+/* #interior-example > div {
+    width: 10%;
+} */
+
+.small-image-interior {
+    height: 9vh;
+} 
+
+/* Fitting room */
+
+#fitting > div {
+    height: 70vh; 
+    background-color: rgb(97, 95, 107);
+    flex-basis: 95%;
+}
+
+.flex-container #fitting-background {
+    position: absolute;
+    top: 15vh;
+    height: 65vh;
+    width: 90%;
+    text-align: center;
+}
+.flex-container #fitting-artpeace {
+    position: absolute;
+    top: 30vh;
+    height: 13vh;
+    text-align: center;
+    padding: 15px;
+}
+
+.main-image-interior {
+    padding: 15px;
+    height: 64vh;
+    z-index: 2;
+}
+
+.main-image-painting {
+    height: 10vh;
+}
+
+div #fitting-artpeace {
+    height: 20vh;
+    background-color: rgb(54, 52, 66);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.85);
+}
+
+/* @media (min-width: 720px) {
+    .flex-container #paintings {
+        flex-wrap: wrap;
+    }
+} */
+
+/* Artpeace slider */
+
+#paintings > div {
+    height: 10vh;
+    width: 10vw;
+    padding: 5px; 
+    margin: 10px 2px;
+}
+
+#paintings > div:hover {
+    background-color: rgb(97, 95, 107);
+    /* flex-grow: 4; */
+}
+
+.flex-container #example-painting {
+    position: absolute;
+    top: 85vh;
+    height: 10vh;
+    /* width: 10%; */
+    text-align: center;
+}
+
+/* #fitting-artpeace {
+    height: 25vh;
+    padding: 12px; 
+    background-color: #383646ec;
+    position:absolute;
+    top:25%;
+    justify-content: center;
+    align-items: center; 
+} */
+
+
+
+
+
